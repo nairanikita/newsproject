@@ -15,7 +15,7 @@ const [filter,setfilter]=useState('');
 
 const getindia=async()=>{
   
-  const response =await fetch(`http://newsapi.org/v2/top-headlines?country=in&apiKey=${APIkey}`);
+  const response =await fetch(`https://newsapi.org/v2/top-headlines?country=in&apiKey=${APIkey}`);
   const dataindia=await response.json();
   console.log(dataindia.articles);
   setnews(dataindia.articles);
@@ -36,7 +36,7 @@ const getnews=async()=>{
  
   sethead("about "+ query);
   
-const response =await fetch(`http://newsapi.org/v2/everything?q=${query}+${filter}&from=${querytime}&sortBy=${newsdata.title}&apiKey=${APIkey}`);
+const response =await fetch(`https://newsapi.org/v2/everything?q=${query}+${filter}&from=${querytime}&sortBy=${newsdata.title}&apiKey=${APIkey}`);
 const data=await response.json();
 console.log(data.articles);
 setnews(data.articles);
