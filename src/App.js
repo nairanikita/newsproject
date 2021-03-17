@@ -90,7 +90,7 @@ const val=e.target.value;
   {newsdata.map(para=>(
 <News  title={para.title}
 image={para.urlToImage}
-content={para.content}
+content={para.description}
 url={para.url}/>
 ))}
 
