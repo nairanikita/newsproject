@@ -15,7 +15,7 @@ const [filter,setfilter]=useState('');
 
 const getindia=async()=>{
   
-  const response =await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=2334e3adad3c48708c5780e4a4e31cf7`);
+  const response =await fetch(`https://newsapi.org/v2/top-headlines?country=in&apiKey=2334e3adad3c48708c5780e4a4e31cf7`);
   const dataindia=await response.json();
   console.log(dataindia.articles);
   setnews(dataindia.articles);
